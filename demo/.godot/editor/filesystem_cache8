@@ -1,0 +1,9 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1704663935
+default_env.tres::Environment::8500773316878911020::1704663783::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1704663783::0::1::::<><>::
+icon.png::CompressedTexture2D::6082749124934761441::1704663783::1704663937::1::::<><>::
+main.gd::GDScript::-1::1704663783::0::1::::<>Control<>::
+main.tscn::PackedScene::8050690358244911695::1704663783::0::1::::<><>::res://main.gd
+nvda.gdextension::GDExtension::-1::1704663783::0::1::::<><>::
+::res://bin/::1704663783

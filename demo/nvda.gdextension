@@ -1,0 +1,10 @@
+[configuration]
+
+entry_symbol = "nvda_library_init"
+
+[libraries]
+
+windows.debug.x86_32 = "res://bin/libgdnvda.windows.template_debug.x86_32.dll"
+windows.release.x86_32 = "res://bin/libgdnvda.windows.template_release.x86_32.dll"
+windows.debug.x86_64 = "res://bin/libgdnvda.windows.template_debug.x86_64.dll"
+windows.release.x86_64 = "res://bin/libgdnvda.windows.template_release.x86_64.dll"
