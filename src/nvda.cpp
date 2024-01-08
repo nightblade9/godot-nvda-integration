@@ -15,7 +15,7 @@ int64_t NVDA::braille_message(const String &p_text) {
 }
 
 int64_t NVDA::is_running() {
-	return nvdaController_testIfRunning();
+	return nvdaController_testIfRunning() == 0;
 }
 
 int64_t NVDA::cancel() {
