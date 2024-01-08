@@ -25,3 +25,9 @@ Once that's done:
 - Move this directory so it's a subdirectory of `godot-cpp`
 - From the root directory of this project, run `scons`
 - Wait. A long, long time.
+
+This should regenerate some of the files in `demo\bin`, such as `demo\bin\libgnvda.windows.template_debug.x86_64.dll`. 
+
+Run the demo project in `demo`. It should Just Work :tm:
+
+Note that any signature changes to the `src` directory's files (e.g. new method, new class, change method signature) requires you to re-run `scons` and restart the Godot editor.

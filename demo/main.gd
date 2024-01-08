@@ -6,7 +6,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$CheckBox.button_pressed = (NVDA.is_running() == 0)
+	$CheckBox.button_pressed = NVDA.is_running()
 
 func _on_button_pressed():
 	NVDA.speak_text("test test")

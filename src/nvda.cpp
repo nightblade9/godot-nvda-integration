@@ -14,7 +14,8 @@ int64_t NVDA::braille_message(const String &p_text) {
 	return nvdaController_brailleMessage((const wchar_t *)p_text.utf16().get_data());
 }
 
-int64_t NVDA::is_running() {
+bool NVDA::is_running() {
+	// Zero is a win; anything else is an error status code (error_status_t or int64_t)
 	return nvdaController_testIfRunning() == 0;
 }
 

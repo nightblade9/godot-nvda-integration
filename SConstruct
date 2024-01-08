@@ -23,8 +23,7 @@ elif env["arch"] == "x86_32":
 
 library = env.SharedLibrary(
     "demo/bin/libgdnvda{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
-    source=sources,
-    LIBPATH='.'
+    source=sources
 )
 
 Default(library)
