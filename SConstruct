@@ -17,13 +17,14 @@ env.Append(CPPPATH=["src/"])
 sources = Glob("src/*.cpp")
 
 if env["arch"] == "x86_64":
-    env.Append(LINKFLAGS=["nvdaControllerClient64.lib"])
+    env.Append(LIBS=File("nvdaControllerClient64.lib"))
 elif env["arch"] == "x86_32":
-    env.Append(LINKFLAGS=["nvdaControllerClient32.lib"])
+    env.Append(LIBS=File("nvdaControllerClient32.lib"))
 
 library = env.SharedLibrary(
     "demo/bin/libgdnvda{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
     source=sources,
+    LIBPATH='.'
 )
 
 Default(library)
