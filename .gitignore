@@ -3,6 +3,4 @@
 
 # C++ binary build outputs
 *.bin
-*.dll
-*.a
 *.obj
