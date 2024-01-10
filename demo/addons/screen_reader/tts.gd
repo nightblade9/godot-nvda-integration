@@ -1,11 +1,26 @@
 extends Node
 
+# Sets the voice for built-in TTS. Feel free to set it when you update options.
+var voice:String
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _init():
+	var voices = DisplayServer.tts_get_voices_for_language("en")
+	self.voice = voices[0] # pick the first. Just 'cuz.
 
+# Say something! If we're already talking, stop.
+func say(text:String) -> void:
+	self.stop()
+	if is_using_nvda():
+		NVDA.speak_text(text)
+	else:
+		DisplayServer.tts_speak(text, self.voice)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+# Stop speaking. Right. Now.
+func stop():
+	if is_using_nvda():
+		NVDA.cancel()
+	else:
+		DisplayServer.tts_stop()
+
+func is_using_nvda():
+	return NVDA.is_running()
