@@ -24,3 +24,5 @@ This should regenerate some of the files in `demo\bin`, such as `demo\bin\libgnv
 Run the demo project in `demo`. It should Just Work :tm:
 
 Note that any signature changes to the `src` directory's files (e.g. new method, new class, change method signature) requires you to re-run `scons` and restart the Godot editor.
+
+To build the release binary, run `scons target=template_release`

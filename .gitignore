@@ -1,2 +1,8 @@
 *.dblite
 .godot
+
+# C++ binary build outputs
+*.bin
+*.dll
+*.a
+*.obj
