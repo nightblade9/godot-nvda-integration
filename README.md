@@ -19,7 +19,7 @@ Once that's done:
 - From the root directory of this project, run `scons`
 - Wait. A long, long time.
 
-This should regenerate some of the files in `demo\bin`, such as `demo\bin\libgnvda.windows.template_debug.x86_64.dll`. 
+This should generate the DLL `demo\bin\libgnvda.windows.template_debug.x86_64.dll`. Copy or move this into `addons\screen_reader` to use it.
 
 Run the demo project in `demo`. It should Just Work :tm:
 
