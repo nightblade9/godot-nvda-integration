@@ -10,18 +10,11 @@ I attempted to adapt and maintain the code for Godot 4.2.1 in 2024, and going fo
 
 # Development Instructions
 
-Same as https://github.com/godotengine/godot-cpp; namely:
-
-- Install Scons (`pip install scons`)
-- Install MSYS2
-- Install MinGW-w64
-- Install the toolchain
-
-See [Getting Started with C++ And MingW-64 in Visual Studio Code](https://code.visualstudio.com/docs/cpp/config-mingw#_installing-the-mingww64-toolchain) for detailed, up-to-date instructions
+You need the same C++ pre-requisites installed that are required for the `godot` repository. Follow the [official build instructions for your target platform](https://docs.godotengine.org/en/stable/contributing/development/compiling/index.html#building-for-target-platforms).
 
 Once that's done:
 
-- Build `godot-cpp`
+- Build `godot-cpp` by running `scons` from the root of the `godot-cpp` repo
 - Move this directory so it's a subdirectory of `godot-cpp`
 - From the root directory of this project, run `scons`
 - Wait. A long, long time.
