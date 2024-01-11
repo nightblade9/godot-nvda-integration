@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmx2xuigcpvt4"]
+[gd_scene load_steps=3 format=3 uid="uid://dmx2xuigcpvt4"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_c326s"]
+[ext_resource type="PackedScene" uid="uid://b4thqo0aybh4q" path="res://addons/screen_reader/ScreenReaderStatusLabel.tscn" id="2_5gdc2"]
 
 [node name="Node" type="Control"]
 layout_mode = 3
@@ -23,5 +24,8 @@ offset_right = 284.0
 offset_bottom = 77.0
 disabled = true
 text = "NVDA is running"
+
+[node name="ScreenReaderStatusLabel" parent="." instance=ExtResource("2_5gdc2")]
+layout_mode = 0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
