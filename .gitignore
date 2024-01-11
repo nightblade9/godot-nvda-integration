@@ -4,3 +4,6 @@
 # C++ binary build outputs
 *.bin
 *.obj
+
+# not ignored without this second entry
+.godot
