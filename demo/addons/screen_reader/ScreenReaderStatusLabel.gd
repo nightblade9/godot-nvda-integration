@@ -26,5 +26,4 @@ func _check_for_state_changes(is_enabled:bool) -> void:
 		say_status = true
 	
 	if say_status:
-		# NVDA doesn't say this on boot-up. Sad. Use built-in TTS.
-		DisplayServer.tts_speak(self.text, NvdaTts.voice)
+		NvdaTts.say(self.text)
