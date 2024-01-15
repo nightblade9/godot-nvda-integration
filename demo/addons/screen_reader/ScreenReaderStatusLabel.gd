@@ -4,7 +4,7 @@ var speak_on_state_change:bool = true
 var _is_enabled_last_check:bool = false
 
 func _ready():
-	NvdaTts.say(self.text)
+	NvdaWrapper.say(self.text)
 
 func _process(_delta):
 	var is_enabled = NVDA.is_running()
@@ -26,4 +26,4 @@ func _check_for_state_changes(is_enabled:bool) -> void:
 		say_status = true
 	
 	if say_status:
-		NvdaTts.say(self.text)
+		NvdaWrapper.say(self.text)

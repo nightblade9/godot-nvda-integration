@@ -21,7 +21,7 @@ general/text_to_speech=true
 
 [autoload]
 
-NvdaTts="*res://addons/screen_reader/NvdaTts.gd"
+NvdaWrapper="*res://addons/screen_reader/NvdaWrapper.gd"
 
 [native_extensions]
 
