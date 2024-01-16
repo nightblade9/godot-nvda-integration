@@ -1,3 +1,5 @@
+![icon](https://raw.githubusercontent.com/nightblade9/godot-nvda-integration/main/icon.png) 
+
 # Godot NVDA Integration
 
 As of 2024, the latest package for integrating NVDA support into Godot seems to be https://github.com/lightsoutgames/godot-tts. However, from speaking to the author on Discord, I understood that this is no longer going to be maintained.
