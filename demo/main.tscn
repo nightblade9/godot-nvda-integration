@@ -3,29 +3,24 @@
 [ext_resource type="Script" path="res://main.gd" id="1_c326s"]
 [ext_resource type="PackedScene" uid="uid://b4thqo0aybh4q" path="res://addons/nvda_integration/ScreenReaderStatusLabel.tscn" id="2_5gdc2"]
 
-[node name="Node" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="Node" type="VBoxContainer"]
 script = ExtResource("1_c326s")
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 149.0
-offset_top = 104.0
-offset_right = 344.0
-offset_bottom = 170.0
+layout_mode = 2
 text = "Speak"
 
 [node name="CheckBox" type="CheckBox" parent="."]
-layout_mode = 0
-offset_left = 129.0
-offset_top = 46.0
-offset_right = 284.0
-offset_bottom = 77.0
+layout_mode = 2
 disabled = true
 text = "NVDA is running"
 
 [node name="ScreenReaderStatusLabel" parent="." instance=ExtResource("2_5gdc2")]
-layout_mode = 0
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+text = "NVDA only"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

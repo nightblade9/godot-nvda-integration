@@ -6,6 +6,14 @@ var voice:String
 func _init():
 	_load_voices()
 
+# Say something in NVDA, without falling back to TTS
+func say_nvda(text:String) -> void:
+	if not is_using_nvda():
+		return
+	
+	NVDA.cancel()
+	NVDA.speak_text(text)
+
 # Say something! If we're already talking, stop.
 func say(text:String) -> void:
 	if self.voice == null:

@@ -9,4 +9,7 @@ func _process(delta):
 	$CheckBox.button_pressed = NVDA.is_running()
 
 func _on_button_pressed():
-	NVDA.speak_text("test test")
+	NvdaWrapper.say("test test")
+
+func _on_button_2_pressed():
+	NvdaWrapper.say_nvda("NVDA only")

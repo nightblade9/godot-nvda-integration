@@ -15,6 +15,15 @@ I attempted to adapt and maintain the code for Godot 4.2.1 in 2024, and going fo
 
 Call `NvdaWrapper.say(...)` to say any text. If NVDA is running, it will speak through NVDA using the user's settings. If NVDA is not running, it will fall back to Godot's text-to-speech (which is dependent on the underlying system's text-to-speech).
 
+# Usage / APIs
+
+- `NvdaWrapper.say(...)`: speaks any text to NVDA, and fall back to text-to-speech. If there's a text already being spoken, it will be cancelled, and the new text will play immediately.
+- `NvdaWrapper.say_nvda`: speaks something only to NVDA, and only if NVDA is running Does not fall back to text-to-speech. Cancels the current text if one is being spoken.
+- `NvdaWrapper.stop`: stops speaking (if speaking)
+- `NvdaWrapper.is_using_nvda`: returns `true` if NVDA is running
+- `NvdaWrapper.voice`: specifies the voice ID (name) of the godot TTS voice to use; this is system dependent, and defaults to the first voice.
+- `ScreenReaderStatusLabel`: a label that reads `NVDA integration is enabled/disabled` with the current status (updated every frame). By default, it speaks whenever NVDA is turned on or off. To disable this functionality, set `speak_on_state_change` to `false`.
+
 # Development Instructions
 
 You need the same C++ pre-requisites installed that are required for the `godot` repository. Follow the [official build instructions for your target platform](https://docs.godotengine.org/en/stable/contributing/development/compiling/index.html#building-for-target-platforms).
