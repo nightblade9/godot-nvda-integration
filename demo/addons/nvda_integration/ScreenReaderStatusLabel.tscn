@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b4thqo0aybh4q"]
 
-[ext_resource type="Script" path="res://addons/screen_reader/ScreenReaderStatusLabel.gd" id="1_ktjml"]
+[ext_resource type="Script" path="res://addons/nvda_integration/ScreenReaderStatusLabel.gd" id="1_ktjml"]
 
 [node name="ScreenReaderStatusLabel" type="Label"]
 text = "NVDA integration disabled"

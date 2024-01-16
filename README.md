@@ -8,6 +8,13 @@ The current code is based on a hastily-thrown-together example from @bruvzg, cir
 
 I attempted to adapt and maintain the code for Godot 4.2.1 in 2024, and going forward.
 
+# Installation
+
+- Copy `addons` and `nvda.gdextension` into your project
+- Add `addons/nvda_integration/NvdaWrapper.gd` as an auto-load
+
+Call `NvdaWrapper.say(...)` to say any text. If NVDA is running, it will speak through NVDA using the user's settings. If NVDA is not running, it will fall back to Godot's text-to-speech (which is dependent on the underlying system's text-to-speech).
+
 # Development Instructions
 
 You need the same C++ pre-requisites installed that are required for the `godot` repository. Follow the [official build instructions for your target platform](https://docs.godotengine.org/en/stable/contributing/development/compiling/index.html#building-for-target-platforms).
@@ -19,7 +26,7 @@ Once that's done:
 - From the root directory of this project, run `scons`
 - Wait. A long, long time.
 
-This should generate the DLL `demo\bin\libgnvda.windows.template_debug.x86_64.dll`. Copy or move this into `addons\screen_reader` to use it.
+This should generate the DLL `demo\bin\libgnvda.windows.template_debug.x86_64.dll`. Copy or move this into `addons\nvda_integration\bin` to use it.
 
 Run the demo project in `demo`. It should Just Work :tm:
 
