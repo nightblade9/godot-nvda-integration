@@ -19,10 +19,6 @@ config/icon="res://icon.png"
 
 general/text_to_speech=true
 
-[autoload]
-
-NvdaWrapper="*res://addons/nvda_integration/NvdaWrapper.gd"
-
 [native_extensions]
 
 paths=["res://nvda.gdextension"]

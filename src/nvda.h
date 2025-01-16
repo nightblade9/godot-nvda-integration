@@ -12,6 +12,7 @@ protected:
 	static void _bind_methods();
 
 	static int64_t speak_text(const String &p_text);
+	static int64_t speak_text_modifier(const String &p_text, const String &lang, float speed);
 	static int64_t braille_message(const String &p_text);
 	static bool is_running();
 	static int64_t cancel();
