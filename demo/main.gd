@@ -6,27 +6,22 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$CheckBox.button_pressed = NVDA.is_running()
+	$CheckBox.button_pressed = NvdaWrapper.is_using_nvda()
 
 func _on_button_pressed():
-	NvdaWrapper.say("NVDA Test Work")
+	NvdaWrapper.say("Screenreader Test Work")
 
 func _on_button_2_pressed():
-	NvdaWrapper.say_nvda("NVDA only")
+	NvdaWrapper.say_nvda("Screenreader only")
 
 func _on_button_new_voice_pressed():
-	NvdaWrapper.say("I have cats", "en-EN", 0.75)
+	NvdaWrapper.say("I have cats", "en-US", 0.75)
 
 func _on_button_french_pressed():
-	NVDA.cancel()
-	#NVDA.speak_text_modifier("Test", "en-EN", 0.5);
 	NvdaWrapper.say("J'ai les chats", "fr-FR", 1.0)
 
 func _on_button_invalid_pressed():
 	NvdaWrapper.say("This will speak, but the voice is invalid.", "INVALID")
-
-func _on_button_invalid_voice_pressed():
-	NvdaWrapper.say("This will speak, but the voice is invalid.", "en-EN", 100000000)
 
 func _on_button_no_text_pressed():
 	NvdaWrapper.say("")
