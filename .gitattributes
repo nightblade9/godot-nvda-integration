@@ -3,6 +3,6 @@
 
 # Only include the addons folder when downloading from the Asset Library.
 /**                  export-ignore
-/nvda.gdextension    !export-ignore
-/addons              !export-ignore
-/addons/**           !export-ignore
+/demo/nvda.gdextension    !export-ignore
+/demo/addons              !export-ignore
+/demo/addons/**           !export-ignore
