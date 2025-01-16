@@ -22,10 +22,6 @@ text = "Speak (French Test)"
 layout_mode = 2
 text = "Speak (Invalid Language)"
 
-[node name="ButtonInvalidVoice" type="Button" parent="."]
-layout_mode = 2
-text = "Speak (Invalid Voice)"
-
 [node name="ButtonNoText" type="Button" parent="."]
 layout_mode = 2
 text = "Speak (No Text)"
@@ -46,6 +42,5 @@ text = "NVDA only"
 [connection signal="pressed" from="ButtonNewVoice" to="." method="_on_button_new_voice_pressed"]
 [connection signal="pressed" from="ButtonFrench" to="." method="_on_button_french_pressed"]
 [connection signal="pressed" from="ButtonInvalid" to="." method="_on_button_invalid_pressed"]
-[connection signal="pressed" from="ButtonInvalidVoice" to="." method="_on_button_invalid_voice_pressed"]
 [connection signal="pressed" from="ButtonNoText" to="." method="_on_button_no_text_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -73,8 +73,6 @@ static func say(text:String, _language: String = "", _speed: float = 1.0) -> voi
 	if voice.is_empty():
 		_load_voices()
 		
-	print(language)
-		
 	# Stops current speech.
 	stop()
 	
