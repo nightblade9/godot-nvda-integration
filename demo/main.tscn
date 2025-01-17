@@ -1,14 +1,30 @@
 [gd_scene load_steps=3 format=3 uid="uid://dmx2xuigcpvt4"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_c326s"]
-[ext_resource type="PackedScene" uid="uid://b4thqo0aybh4q" path="res://addons/nvda_integration/ScreenReaderStatusLabel.tscn" id="2_5gdc2"]
+[ext_resource type="PackedScene" uid="uid://b4thqo0aybh4q" path="res://examples/ScreenReaderStatusLabel.tscn" id="2_5gdc2"]
 
 [node name="Node" type="VBoxContainer"]
 script = ExtResource("1_c326s")
 
-[node name="Button" type="Button" parent="."]
+[node name="ButtonDefault" type="Button" parent="."]
 layout_mode = 2
-text = "Speak"
+text = "Speak (Default)"
+
+[node name="ButtonNewVoice" type="Button" parent="."]
+layout_mode = 2
+text = "Speak (English Test)"
+
+[node name="ButtonFrench" type="Button" parent="."]
+layout_mode = 2
+text = "Speak (French Test)"
+
+[node name="ButtonInvalid" type="Button" parent="."]
+layout_mode = 2
+text = "Speak (Invalid Language)"
+
+[node name="ButtonNoText" type="Button" parent="."]
+layout_mode = 2
+text = "Speak (No Text)"
 
 [node name="CheckBox" type="CheckBox" parent="."]
 layout_mode = 2
@@ -22,5 +38,9 @@ layout_mode = 2
 layout_mode = 2
 text = "NVDA only"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ButtonDefault" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ButtonNewVoice" to="." method="_on_button_new_voice_pressed"]
+[connection signal="pressed" from="ButtonFrench" to="." method="_on_button_french_pressed"]
+[connection signal="pressed" from="ButtonInvalid" to="." method="_on_button_invalid_pressed"]
+[connection signal="pressed" from="ButtonNoText" to="." method="_on_button_no_text_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
