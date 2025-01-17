@@ -80,9 +80,9 @@ static func say(text:String, _language: String = "", _speed: float = 1.0) -> voi
 	# Tries to use NVDA by default, but if it fails,
 	# will fallback to OS TTS.
 	if !say_nvda(text, _language, _speed):
-		# If a voice is not set by loading voices, printerr an error.
+		# If a voice is not set by loading voices, print an error.
 		if voice.is_empty():
-			printerrerr("No voice is available with language %s." % _language)
+			printerr("No voice is available with language %s." % _language)
 			return
 		
 		# Constrains speed range.
@@ -124,9 +124,9 @@ static func _load_voices(_language: String = DEFAULT_LANGUAGE):
 			# Uses the whole language-locale string
 			voices = DisplayServer.tts_get_voices_for_language(_language)
 	
-	# If voices are empty, printerr an error and return.
+	# If voices are empty, print an error and return.
 	if voices.is_empty():
-		printerrerr("No voices found for language %s" % _language)
+		printerr("No voices found for language %s" % _language)
 		return
 		
 	voice = voices[0]
