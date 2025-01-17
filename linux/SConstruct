@@ -15,7 +15,7 @@ env.Append(CPPPATH=["src/"])
 sources = Glob("src/*.cpp")
 
 library = env.SharedLibrary(
-    "../demo/addons/nvda_integration/bin/x86_64/libgdnvda{}{}".format(env["suffix"], env["SHLIBSUFFIX"]),
+    "../demo/addons/nvda_integration/bin/{}/libgdnvda{}{}".format(env["HOST_ARCH"], env["suffix"], env["SHLIBSUFFIX"]),
     source=sources
 )
 
