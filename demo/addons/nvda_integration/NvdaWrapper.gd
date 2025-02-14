@@ -123,6 +123,9 @@ static func _load_voices(_language: String = DEFAULT_LANGUAGE):
 		"Linux":
 			# Uses the whole language-locale string
 			voices = DisplayServer.tts_get_voices_for_language(_language)
+		"macOS":
+			# Uses the whole language-locale string
+			voices = DisplayServer.tts_get_voices_for_language(_language)
 	
 	# If voices are empty, print an error and return.
 	if voices.is_empty():

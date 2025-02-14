@@ -11,9 +11,13 @@ windows.debug.x86_64 = "res://addons/nvda_integration/bin/x86_64/libgdnvda.windo
 windows.release.x86_64 = "res://addons/nvda_integration/bin/x86_64/libgdnvda.windows.template_release.x86_64.dll"
 linux.debug.x86_64 = "res://addons/nvda_integration/bin/x86_64/libgdnvda.linux.template_debug.x86_64.so"
 linux.release.x86_64 = "res://addons/nvda_integration/bin/x86_64/libgdnvda.linux.template_release.x86_64.so"
+macos.debug = "res://addons/nvda_integration/bin/x86_64/libgdnvda.macos.template_debug.universal.dylib"
+macos.release = "res://addons/nvda_integration/bin/x86_64/libgdnvda.macos.template_release.universal.dylib"
 
 [dependencies]
 
+macos.debug = { "res://bin/libdependency.macos.template_debug.framework" : "Contents/Frameworks" }
+macos.release = { "res://bin/libdependency.macos.template_release.framework" : "Contents/Frameworks" }
 windows.debug.x86_32 = { "res://addons/nvda_integration/bin/x86_32/nvdaControllerClient.dll": "" }
 windows.release.x86_32 = { "res://addons/nvda_integration/bin/x86_32/nvdaControllerClient.dll": "" }
 windows.debug.x86_64 = { "res://addons/nvda_integration/bin/x86_64/nvdaControllerClient.dll": "" }
